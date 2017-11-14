@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+{% extends "homepage.html"%}
+{% block title %}Courses{% endblock %}
+{% block head%}
+  {{ super() }}
+{% endblock%}
+{% block page_content%}
+
+<!-- Page Content -->
+
+<div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="container">
+                <h1 class="mt-5"> <i class="fa fa-user-circle" aria-hidden="true"></i> MY COURSES:</h1>
+                <p class="lead">COURSES</p>
+                <ul>
+                    {% for courses in courses %}
+                      <li style="list-style-type: none;">{{courses}}</li>
+                    {% endfor%}
+                </ul>
+
+              </div>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Organizational Behavior
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Course Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        The purpose of this course is to increase your understanding of human behavior in organizations at the individual, interpersonal, group, and organizational levels. At the conclusion of this course, you should be able to:
+
+recognize, name, and describe organizational behavior (OB) theories and concepts in practice
+identify and apply the principles of OB theories and concepts to your own personal and work experiences
+analyze and apply these concepts and theories to the challenges of management
+      </div>
+    </div>
+  </div>
+</div>
+      <!-- Button trigger modal -->
+      <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Business Computing: Tools and Concepts
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" >Course Description</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+Introduction to computers: components and operations. Introduction to management information/decision support systems and the system development process. Emphasis on microcomputers and software packages used in business.
+            </div>
+
+          </div>
+        </div>
+      </div>
+<!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Introduction to Entrepreneurship
+      </button>
+<!-- Modal -->
+                <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" >Course Description</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        This course focuses on understanding the basic concepts, tools, and practices of entrepreneurship and the development of entrepreneurial skills. The entrepreneurial process (opportunity recognition, resource marshaling, and team building driven by communication, creativity, and leadership) and business planning are emphasized.
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                            </div>
+                            </div>
+                            </div>
+
+<script src="modal.js"></script>
+
+
+{% endblock%}

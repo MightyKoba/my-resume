@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends "homepage.html"%}
+{% block title %}About Me{% endblock %}
+
+{% block head%}
+  {{ super() }}
+{% endblock%}
+
+{% block page_content%}
+  <!-- Page Content -->
+  <div style="text-align: center;" class="container">
+    <h1 class="mt-5"><i class="fa fa-address-card-o" aria-hidden="true"></i> ABOUT ME</h1>
+    <h3 class="mt-5"><i class="fa fa-database" aria-hidden="true"></i>EXPERIENCE</h3>
+    <p>
+    Programming Language Experience
+    </p>
+    <ul style="list-style-type: none;">
+      <li>JavaScript</li>
+      <li>HTML</li>
+      <li>Python</li>
+      <li>CSS</li>
+    </ul>
+    <p>Developed By: <a id="developer" href="https://github.com/MightyKoba" data-toggle="tooltip" data-placement="top" title="University of Delaware Junior">Ernest Nguatem</a>.</p>
+
+  </div>
+{% endblock%}
+
+{% block scripts%}
+  {{super()}}
+  <script>
+  $(document).ready(function () {
+    $('#developer').tooltip()
+  });
+  </script>
+{% endblock%}
