@@ -6,7 +6,7 @@ manager = Manager(app)
 
 
 @manager.command
-def deploy():
+def deploy(): 
     db.drop_all()
     db.create_all()
     dianne_leipold = Professor(name='Dianne Leipold', department='Business Administration')
