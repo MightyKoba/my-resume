@@ -137,7 +137,7 @@ def add_courses():
 def delete_course(id):
     course = Course.query.filter_by(id=id).first()
     professors = Professor.query.all()
-    if request.method == 'GET':
+    if request.method == 'GET': 
         return render_template('course-delete.html', course=course, professors=professors)
     if request.method == 'POST':
         # use the id to delete the song
